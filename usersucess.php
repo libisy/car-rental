@@ -21,20 +21,22 @@
 					<h3>Promotional stuffs</h3>
 			</div>
 			<div class="form-content pull-right">
-				<h3 class="text-center row">Admin Login</h3>
+				<h3 class="text-center row">Pick up/Drop off info</h3>
 				<div class="row text-center">
 					<hr class="col-3">
 				</div>
 				<div class="form-body text-center">
-					<form class="admin-log" action="adminlog.php" method="post">
-
-						<label for="username">
-							Username
-						</label><input type="text" name="username" id="username" class="input-small">
-						<label for="password">
-							Password
-						</label><input type="password" name="password" id="password" class="input-small">
-						<br>
+					<form class="Rental Form" action="usersucess.php" method="post">
+						<label for="location">
+							Location
+						</label><input type="text" name="location" id="location" class="input-small">
+						<label for="date">
+							Date
+						</label><input type="date" name="date" id="date" class="input-small">
+						<label for="time">
+							Time
+						</label><input type="time" name="time" id="time" class="input-small">
+										<br>
 						<div class="row text-center padding-vertical-small">
 						  <input type="submit" name="name" value="submit">
 						</div>

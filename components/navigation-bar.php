@@ -24,21 +24,16 @@
           class = "underline"
         <?php } ?>
         ><b><a href="about.php">About us</a></b></li>
-     <li
-        <?php if ($active_page == "product") {?>
-          class = "underline"
-        <?php } ?>
-     ><b><a href = "product.php">products</a></b></li>
-     <li
+         <li
         <?php if ($active_page == "contact") {?>
           class = "underline"
         <?php } ?>
-     ><b><a href ="contact.php">contact us</a></b></li>
+     ><b><a href ="contact.php">Contact us</a></b></li>
      <li
         <?php if ($active_page == "services") {?>
           class = "underline"
         <?php } ?>
-     ><b><a href="services.php">our services</a></b></li>
+     ><b><a href="services.php">Services</a></b></li>
      <li
         <?php if ($active_page == "admin") {?>
           class = "underline"

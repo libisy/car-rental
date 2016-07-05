@@ -1,6 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
+@font-face {
+    font-family: Anson;
+    src: url('./fonts/anson-regular-webfont.woff');
+}
 
 body{
 	margin-left:1%;
@@ -103,8 +107,9 @@ a{
 
 .container {
 		margin: 10px 30px;
-		width: 80% !important;
-		max-width: 1200px !important;
+		width: 100% !important;
+		max-width: 1583px !important;
+		overflow: hidden;
 }
 
 .header.batman{
@@ -152,7 +157,6 @@ a{
 .menu ul{
 	margin-right:20%;
 	color:#FFF;
-
 }
 
 .menu ul li a:hover {
@@ -168,29 +172,37 @@ a{
 	}
 
 .content{
-	height:900px;
+	min-height:800px;
 	width:100%;
 	background-color:#skyblue;
-	float:left;
+	float:right;
+	margin-top: -20px;
 }
+
 .footer{
-	height:70px;
-	padding: 20px 5px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+	height: 200px;
 	width:100%;
-	background-color: #white;
+	background-color: #275252;
+	bottom: 0;
 }
 
 /*signup start*/
 .form-content {
-	width: 60%;
-	border: 1px solid rgba(50,50,50,0.2);
+	width: 45%;
+	border: 1px solid rgba(255,255,255,0.2);
 	border-radius: 10px;
 	padding: 10px 20px;
 	margin: 10px auto;
+	background-color: rgba(180,180,180,0.3);
 }
 
 .input-small {
 	width: 60%;
+	color: #222;
 }
 
 .promo {
@@ -200,3 +212,192 @@ a{
 
 /*login start*/
 /*login end*/
+
+table.rate{
+	border: none;
+	width: 100%;
+	background-color: #f4f8fa;
+	padding: 5px;
+}
+
+table.rate td, th, tr, thead, tbody {
+	border : none;
+	padding: 5px;
+}
+
+table.rate thead tr th {
+	padding-left: 5px;
+}
+
+table.rate tr:nth-child(even) {
+	background-color: #e2e6e8;
+}
+
+table.rate thead {
+	background-color: #e0e0e0;
+}
+
+table.rate th {
+    height: 50px;
+}
+.error {
+	color: #FF0000;
+	font-size: 10px;
+	width: 180px;
+	text-align: left;
+	line-height: 30px;
+	position: absolute;
+	margin-right: 30px;
+	padding-left: 5px;
+	display: none;
+}
+
+.valid {
+	color: #00FF00;
+	font-size: 10px;
+	width: 180px;
+	text-align: left;
+	line-height: 30px;
+	position: absolute;
+	margin-right: 30px;
+	padding-left: 5px;
+	display: none;
+}
+
+.home-cover {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 100%;
+	background-image: url('../photos/cover.jpg');
+	background-position: initial;
+	background-size: cover;
+	height: 80vh;
+}
+
+.signup-cover {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	width: 100%;
+	background-image: url('../photos/cover.jpg');
+	background-position: initial;
+	background-size: cover;
+	height: 800px;
+	padding: 15px;
+}
+
+.promotion {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	font-size: 65px;
+	width: 45%;
+}
+
+.home-slogan {
+	aligh-content: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	text-align: center;
+}
+
+.big-slogan {
+	font-size: 65px;
+}
+
+.small-slogan {
+	font-size: 30px;
+}
+.top-stripe {
+	width: 100%;
+	height: 70px;
+	background-color: #275252;
+	padding: 10px;
+}
+
+.title {
+	font-size: 60px;
+	float: left;
+	font-weight: 100;
+	color: white;
+	height: 60px;
+	line-height: 70px;
+	font-family: Anson;
+	padding-left: 20px;
+}
+
+.top-stripe a {
+	color: white;
+}
+
+.top-stripe a:hover {
+	color: inherit;
+}
+
+.white {
+	color: white !important;
+}
+
+.bar-unlogged {
+	line-height: 65px;
+}
+
+.bar-unlogged ul{
+	margin-right:10%;
+}
+
+.bar-unlogged ul li a:hover {
+	text-decoration: none;
+}
+.bar-unlogged ul li{
+	font-size: 25px;
+	float:right;
+	list-style:none;
+	margin-left:2%;
+	margin-right:1px;
+	color:#FFF;
+}
+
+.how-to {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: rgba(20,20,20,0.3);
+	height: 400px;
+}
+
+.how-to a {
+	color: black;
+}
+.how-to-box {
+	display: flex;
+	margin-left: 40px;
+	justify-content: center;
+	align-content: center;
+	background-color: rgba(20,0,0,0.3);
+	height: 320px;
+	width: 300px;
+}
+
+.small {
+	display: flex;
+	justify-content: center;
+	font-size: 35px !important;
+	width: 30%;
+}
+
+.copyright {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 70%;
+}
+
+.pointer {
+	cursor: pointer;
+}
