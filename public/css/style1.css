@@ -172,7 +172,7 @@ a{
 	}
 
 .content{
-	min-height:800px;
+	min-height:650px;
 	width:100%;
 	background-color:#skyblue;
 	float:right;
@@ -200,8 +200,31 @@ a{
 	background-color: rgba(180,180,180,0.3);
 }
 
+.form-content-plain {
+	width: 45%;
+	border: 1px solid rgba(50,50,50,0.8);
+	border-radius: 10px;
+	padding: 10px 20px;
+	margin: 10px auto;
+}
+
 .input-small {
 	width: 60%;
+	color: #222;
+}
+
+input[type="date"] {
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.input-x-small {
+	width: 30%;
 	color: #222;
 }
 
@@ -211,6 +234,23 @@ a{
 /*signup end*/
 
 /*login start*/
+.login-input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.signin-cover {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	width: 100%;
+	background-image: url('../photos/cover.jpg');
+	background-position: initial;
+	background-size: cover;
+	height: 650px;
+	padding: 15px;
+}
 /*login end*/
 
 table.rate{
@@ -313,11 +353,33 @@ table.rate th {
 .small-slogan {
 	font-size: 30px;
 }
+
+.black {
+  color: #555;
+}
+
+.center-everything {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center
+}
+
+
 .top-stripe {
 	width: 100%;
 	height: 70px;
 	background-color: #275252;
 	padding: 10px;
+}
+
+.page-title {
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-end;
 }
 
 .title {
@@ -333,6 +395,14 @@ table.rate th {
 
 .top-stripe a {
 	color: white;
+}
+
+.title a {
+  color: white;
+}
+
+.title a:hover {
+  color: white;
 }
 
 .top-stripe a:hover {
@@ -362,12 +432,28 @@ table.rate th {
 	margin-right:1px;
 	color:#FFF;
 }
+.how-to-icon {
+  width: 200px;
+  display: flex;
+  align-content: center;
+  align-items: flex-end;
+  justify-content: center;
+  height: 200px;
+}
+
+.how-to-label{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  height: 60px;
+}
 
 .how-to {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	background-color: rgba(20,20,20,0.3);
 	height: 400px;
 }
 
@@ -376,12 +462,22 @@ table.rate th {
 }
 .how-to-box {
 	display: flex;
+  flex-direction:column;
+  align-items: center;
 	margin-left: 40px;
-	justify-content: center;
+	justify-content: space-around;
 	align-content: center;
-	background-color: rgba(20,0,0,0.3);
 	height: 320px;
 	width: 300px;
+  border: 1px solid rgba(20,20,20,0.4);
+  border-radius: 20px;
+  background-color: rgba(200,200,200,0.3);
+  box-shadow: 5px 5px 5px rgba(180,180,180,0.3);
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
 }
 
 .small {
@@ -394,10 +490,95 @@ table.rate th {
 .copyright {
 	display: flex;
 	justify-content: center;
-	align-content: center;
-	width: 70%;
+	align-content: left;
+	width: 20%;
 }
 
 .pointer {
 	cursor: pointer;
+}
+
+.background-cover {
+  background-position: center;
+  background-size: cover;
+}
+.sign-up-logo {
+  background-image: url('../../asset/pics/signup.png');
+}
+
+.book-logo {
+  background-image: url('../../asset/pics/rent1.png');
+}
+
+.pay-logo {
+  background-image: url('../../asset/pics/pay.png');
+}
+
+.ride-logo {
+  background-image: url('../../asset/pics/ride.png');
+}
+
+.car-logo {
+  background-image: url('../../asset/pics/car-icon1.png');
+}
+
+.jeep-logo {
+  background-image: url('../../asset/pics/jeep-icon1.png');
+}
+
+.micro-logo {
+  background-image: url('../../asset/pics/micro-icon.png');
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+/*addvehicle start*/
+  .add-car{
+    width: 80%;
+  }
+/*addvehicle end*/
+
+/*font standards start*/
+.medium-font {
+  font-size: 20px;
+}
+
+.medium-small-font {
+  font-size: 16px;
+}
+
+.block {
+  height: 200px;
+}
+/*font standards end*/
+
+.summary {
+  min-height: 50vh;
+}
+
+.summary-body {
+  flex-direction: column;
+}
+
+.key {
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.value {
+  width: 55%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.reservations {
+  width: 80%;
 }

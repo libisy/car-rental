@@ -27,7 +27,7 @@
 		$sql="insert into users ( first_name, last_name, email, username, password, address_line_1, address_line_2, phone_number, type )
 		values ( '$fname', '$lname', '$email', '$username', '$password', '$addressline1', '$addressline2', '$phone', 'user')";
 
-		if ($con->query($sql) === TRUE) {
+		if ($con->query($sql) == TRUE) {
 			echo "User created successfully";
 			// header("location:usersucess.php");
 		} else {

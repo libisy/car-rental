@@ -2,12 +2,21 @@
   <div class="top-stripe">
     <div class="title pointer">
       <a href="index.php">
-        Gududu
+        4W-RENTAL
       </a>
     </div>
     <div class="">
       <?php
-        include('components/bar-unlogged.php');
+        $filepath = dirname(__FILE__);
+        if (isset($_SESSION['user'])) {
+          if ($_SESSION['type'] == 'user') {
+            include($filepath . '/bar-logged.php');
+          } else  if ($_SESSION['type'] == 'admin'){
+            include($filepath . '/navigation-admin.php');
+          }
+        } else {
+          include($filepath . '/bar-unlogged.php');
+        }
       ?>
     </div>
   </div>

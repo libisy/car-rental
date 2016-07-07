@@ -1,32 +1,19 @@
-<?php session_start();
-	// include("config1.php");
-	// if(isset($_POST["login"]))
-	// {
-	// $email = $_POST["email"];
-	// $pwd = $_POST["pwd"];
-	// $sql = "SELECT * FROM proj WHERE Email = '$email' AND Password = '$pwd'";
-	// $result = mysql_query($sql);
-	// if(mysql_num_rows($result)>0)
-	// {
-	// 	$_SESSION["admin"] = "admin";
-	//
-	// header("Location:index2.php");
-	// exit;
-	// echo mysql_error();
-	// }
-	// else
-	// {
-	// 	echo "invalid user name and password";
-	// }
-	//
-	// }
-?>
 <!doctype html>
 <html>
 <head>
+	<script type="text/javascript" src="public/js/formValidation.js"></script>
+
 	<?php
+		session_start();
 		include('components/header.php');
 		$active_page="about";
+		if (isset($_SESSION['user'])) {
+			if ($_SESSION['type'] == 'user') {
+				header('location:myreservations.php');
+			} else if ($_SESSION['type'] == 'admin') {
+				header('location:addVehicle.php');
+			}
+		}
 	?>
 </head>
 
@@ -34,32 +21,36 @@
 	<!-- header section  -->
 	<div class="container">
 		<?php
-			include("components/navigation-bar.php");
+			include("components/new-navigation.php");
 		?>
 
 		<?php if (false) { ?> true <?php } ?>
 		<div class="content">
-			<!-- content goes here -->
-			<div class="form-content">
-				<h3 class="text-center row">Login</h3>
-				<div class="row text-center">
-					<hr class="col-3">
-				</div>
-				<div class="form-body text-center">
-					<form class="sign-up" action="login.php" method="post">
-						<label for="email-username">
-							Email/Username
-						</label><input type="text" name="email-username" id="email" class="input-small">
-						<label for="password">
-							Password
-						</label><input type="password" name="password" id="password" class="input-small">
-						<br>
-						<div class="row text-center padding-vertical-small">
-						  <input type="submit" name="name" value="submit">
+			<div class="signin-cover white">
+				<div class="form-content pull-right">
+					<h3 class="text-center row">Sign In</h3>
+					<div class="row text-center">
+						<hr class="col-3">
+					</div>
+					<div class="form-body text-center">
+						<form class="sign-up" action="login.php" method="post">
+						<!-- <form class="sign-up"> -->
+						<div class="login-input row">
+							<input type="text" name="username" placeholder="Username" id="username" class="input-small">
 						</div>
-					</form>
+						<div class="login-input row">
+							<input type="password" name="password" id="password" placeholder="Password" class="input-small" onblur="requiredValue(this)">
+						</div>
+							<div class="row text-center padding-vertical-small">
+								<input type="submit" class="white" name="login" value="Login" onsubmit="event.preventDefault();">
+								<!-- <input  type="button" value="submit" name="name"  class="white" onclick=" validationComplete();"> -->
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
+			<!-- content goes here -->
+
 		</div>
 		<div class="clearfix">
 		</div>

@@ -52,7 +52,7 @@
 					</div>
 					<div class="form-body text-center">
 						<form class="sign-up" action="signup.php" method="post">
-						<!-- <form class="sign-up"> -->
+							<!-- <form class="sign-up"> -->
 
 							<label for="firstname">
 								First Name
@@ -79,7 +79,7 @@
 							<label for="password">
 								Password
 							</label><input type="password" name="password" id="password" class="input-small" onblur="requiredValue(this)">
-						<span class="error" id="error-password">password is Empty</span>
+							<span class="error" id="error-password">password is Empty</span>
 
 							<label for="address_line_1">
 								Address Line 1
@@ -92,9 +92,9 @@
 							<label for="phone_number">
 								Phone Number
 							</label><input type="text" name="phone_number" id="phone_number" class="input-small" onblur="requiredValue(this);numberValidation(this)">
-						<span class="error" id="error-phone_number">phone number is Empty</span>
-						<span class="valid" id="valnumber">valid</span>
-						<span class="error" id="errornum-phone_number">invalid</span>
+							<span class="error" id="error-phone_number">phone number is Empty</span>
+							<span class="valid" id="valnumber">valid</span>
+							<span class="error" id="errornum-phone_number">invalid</span>
 
 							<br>
 							<div class="row text-center padding-vertical-small">
